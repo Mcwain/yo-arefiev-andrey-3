@@ -1,5 +1,9 @@
-const a = prompt ('enter the number')
-const b = 1;
+let a = prompt ('enter the number');
+if (isNaN(a)){
+    alert("It's not a number :( Try again.");
+    console.log ("need number");
+    }
+let b = 1;
 while (a > 1){
 b = b * a;
 a = a - 1;
