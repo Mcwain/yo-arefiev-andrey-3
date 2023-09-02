@@ -1,0 +1,45 @@
+.header {
+    display: flex;
+    border-bottom:1px solid #828282;
+    &__nav {
+        display: flex;
+        margin: 17px auto;
+        min-width: 100%;
+    }
+    &__nav-list {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+    &__nav-title {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        font-family: $gilroy;
+        font-weight: 700;
+        padding: 0;
+        margin-right: 680px;
+        font-size: 18px;
+        color: black;
+        text-decoration: none;
+    }
+    &__nav-title:hover {
+        color: #828282;
+        transition: 1s;
+    }
+    &__nav-link {
+        font-family: $gilroy;
+        font-weight: 400; 
+        font-size: 18px;
+        gap: 20px;      
+        text-decoration: none;
+        color: #828282;       
+    }
+    &__nav-link:hover {
+        color: black;
+        transition: 1s;
+    }
+    &__nav-item {
+        list-style-type: none;        
+    }
+}

@@ -1,0 +1,102 @@
+/*
+  Код ниже нужно удалить, он добавлен просто для примера
+*/
+.footer {
+  text-align: center;
+  padding-top: 60px;
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-caption {
+      font-family:$gilroy;
+      font-size: 34px;
+      margin: 0 auto;
+    }
+    &-slogan {
+      font-family:$gilroy;
+      font-size: 18px;
+      font-weight: 500;
+      max-width: 269px;
+      margin: 20px auto 30px;
+    }
+    &-button {
+      font-family:$gilroy;
+      font-size: 18px;
+      padding: 10px 29px;
+      border-radius: 30px;
+      color: #fff;
+      background: #070707;
+    }
+    &-button:hover {
+      color: #070707;
+      background: #fff;
+      transition: 1s;
+    }
+    &-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 35px 10px;
+      max-width: 330px;
+      padding: 0;
+      margin: 40px auto;
+    }
+    &-item {
+      list-style: none;
+    }
+    &-link {
+      font-family:$gilroy;
+      font-size: 18px;
+      font-weight: 700;
+      color: #070707;
+      text-decoration: none;
+      padding: 10px 19px;
+      border-radius: 30px;
+      border: 2.5px solid #070707;
+    }
+    &-link:hover {
+      color: #fff;
+      background: #070707;
+      transition: 1s;
+    }
+    &-link:disabled {
+      color: #E5E5E5;
+      border-color: #E5E5E5;
+    }
+    &-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 186px;
+      flex-wrap: wrap;
+    }
+    &-title {
+      font-family:$gilroy;
+      font-size: 14px;
+      font-weight: 400;
+      padding-bottom: 5px;
+      padding-right: 5px;
+      color: #828282;
+    }
+    &-btn {
+      font-family:$gilroy;
+      font-size: 14px;
+      padding-bottom: 5px;
+      font-weight: 400;
+      color: #828282;
+    }
+    &-btn:hover {
+      color: #070707;
+      transition: 1s;
+    }
+    &-subtitle {
+      font-family:$gilroy;
+      font-size: 14px;
+      font-weight: 400;
+      color: #828282;
+      margin: -20px auto 60px;
+    }
+  }
+}

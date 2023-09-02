@@ -1,0 +1,25 @@
+<footer class="footer">
+  <section class="footer__wrap container">
+    @@include('blocks/h2.html', {
+      'class':"footer__wrap-caption",
+      'text':"Contacts"
+    })
+    @@include('blocks/text.html', {
+      'class':"footer__wrap-slogan",
+      'text':"Want to know more or just chat? You are welcome!"
+    })
+    <button class="footer__wrap-button" type="submit">Send message</button>
+    @@include('blocks/message.html')
+    <div class="footer__wrap-wrapper">
+      @@include('blocks/text.html', {
+        'class':"footer__wrap-title",
+        'text':"Desing by"
+      })
+      <a class="footer__wrap-btn" href="#">DL Academy</a>
+      @@include('blocks/text.html', {
+        'class':"footer__wrap-subtitle",
+        'text':"Program code from Andrey" 
+      })
+    </div>
+  </section>
+</footer>
