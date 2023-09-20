@@ -1,0 +1,63 @@
+.myHeader {
+    display: flex;
+    border-bottom:1px solid #828282;
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        margin: 17px auto;
+        min-width: 100%;
+        &-title {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+            align-content: center;
+            font-family: $gilroy;
+            font-weight: 700;
+            padding: 0;
+            font-size: 18px;
+            color: black;
+            text-decoration: none;
+        }
+        &-list {
+            display: flex;
+            min-width: 88%;
+            padding: 0;
+            flex-direction: row;
+            justify-content: space-between;
+        }   
+        &-title:hover {
+            color: #828282;
+            transition: 1s;
+        }
+        &-link {
+            font-family: $gilroy;
+            font-weight: 400; 
+            font-size: 18px;
+            gap: 20px;      
+            text-decoration: none;
+            color: #828282;       
+        }
+        &-link:hover {
+            color: black;
+            transition: 1s;
+        }
+        &-btn {
+            border: none;
+            padding: 0;
+            font-family: $gilroy;
+            font-weight: 400; 
+            font-size: 18px;
+            gap: 20px;      
+            text-decoration: none;
+            color: #828282;
+            background: transparent;
+        }
+        &-btn:hover {
+            color: black;
+            transition: 1s;
+        }
+        &-item {
+            list-style-type: none;        
+        }
+    }   
+}

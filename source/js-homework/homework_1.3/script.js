@@ -16,9 +16,3 @@ for (i=1; i<=degree; i++){
 result*=num;
 }
 console.log(result);
-
-// const num = prompt ("enter the number");
-// const degree = prompt ("enter the degree");
-
-// const result = num ** degree;
-// console.log(result);

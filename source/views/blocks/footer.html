@@ -8,7 +8,7 @@
       'class':"footer__wrap-slogan",
       'text':"Want to know more or just chat? You are welcome!"
     })
-    <button class="footer__wrap-button" type="submit">Send message</button>
+    <button class="footer__wrap-button footer__button-js" type="submit">Send message</button>
     @@include('blocks/message.html')
     <div class="footer__wrap-wrapper">
       @@include('blocks/text.html', {
@@ -22,4 +22,6 @@
       })
     </div>
   </section>
+  @@include('blocks/popup_message.html')
+  <script src="./js/popup_message.js"></script>
 </footer>

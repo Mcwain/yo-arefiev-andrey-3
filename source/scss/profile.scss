@@ -1,0 +1,57 @@
+.banner {
+    &__wrap {
+        display: flex;
+        &-img {
+            width: 320px;
+            max-width: 100%;
+            height: auto;
+            background: #F6F6F6;
+            box-shadow: 0px 4px 20px 0px #00000040;
+        }
+        &-svg {
+            display: flex;
+            min-width: 100%;
+            margin-top: 40%;
+        }
+        &-list {
+            margin-top: 0;
+            margin-left: 105px;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+        &-item {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 20px;
+        }
+        &-title {
+            font-family: $gilroy;
+            font-size: 18px;
+            font-weight: 700;           
+            margin: 0;
+            margin-right: 15px;
+        }
+        &-text {
+            font-family: $gilroy;
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0;
+        }
+        &-inner {
+            display: inline;
+        }
+        &-btn {
+            display: flex;            
+            font-family: $gilroy;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            color: #070707;
+            border-radius: 30px;
+            border: 2.5px solid #070707;
+            padding: 10px 19px;
+            margin-bottom: 20px;
+            margin-left: 105px;
+        }
+    }
+}

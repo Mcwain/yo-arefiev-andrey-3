@@ -1,37 +1,92 @@
-// Получаем элементы слайдера
-const slider = document.querySelector('.slider__wrapper');
-const prevButton = document.querySelector('.slider__wrap-btnPref');
-const nextButton = document.querySelector('.slider__wrap-btnNext');
-const slides = Array.from(slider.querySelectorAll('img'));
-const slideCount = slides.length;
-let slideIndex = 0;
+const wrapper = document.querySelector('.main__slider-wrapper');
+const innerWrapper = document.querySelector('.main__slider-inner');
+const slides = document.querySelectorAll('.main__slider-slide');
+const buttonBack = document.querySelector('.main__slider_btnPref-js');
+const buttonNext = document.querySelector('.main__slider_btnNext-js');
+const pagination = document.querySelector('.main__slider_pagination-js');
 
-// Устанавливаем обработчики событий для кнопок
-prevButton.addEventListener('click', showPreviousSlide);
-nextButton.addEventListener('click', showNextSlide);
+let shearWidth = +getComputedStyle(wrapper).width.split("px")[0];
+let numberSlides = innerWrapper.childElementCount - 1;
 
-// Функция для показа предыдущего слайда
-function showPreviousSlide() {
-  slideIndex = (slideIndex - 1 + slideCount) % slideCount;
-  updateSlider();
-}
+let activeSlide = 0;
+let timerID;
 
-// Функция для показа следующего слайда
-function showNextSlide() {
-  slideIndex = (slideIndex + 1) % slideCount;
-  updateSlider();
-}
+const timerLogic = () => {
+  if (timerID) clearTimeout(timerID);
+  timerID = setTimeout(() => {
+    innerWrapper.style.transition = "";
+  }, 700);
+};
+const addWidthSlides = () => {
+  for (slide of slides) {
+    slide.style.width = `${shearWidth}px`;
+  }
+};
+const changeActivePoint = (index) => {
+  const activePoint = document.querySelector(".main__slider-dot_check");
+  activePoint.classList.remove("main__slider-dot_check");
+  pagination.children[index].classList.add("main__slider-dot_check");
+  
+  index === 0
+    ? buttonBack.setAttribute("disabled", "disabled")
+    : buttonBack.removeAttribute("disabled");
+  
+  index === numberSlides
+    ? buttonNext.setAttribute("disabled", "disabled")
+    : buttonNext.removeAttribute("disabled");
+};
+const changeActiveSlide = (whereTo) => {
+  const indentML = +innerWrapper.style.marginLeft.split("px")[0];
+  innerWrapper.style.transition = "margin-left .2s";
+  switch (whereTo) {
+    case "next":
+      if (activeSlide < numberSlides) {
+        innerWrapper.style.marginLeft = `${indentML - shearWidth}px`;
+        activeSlide = activeSlide + 1;
+        buttonBack.removeAttribute("disabled");
+      }
+      if (activeSlide === numberSlides) {
+        buttonNext.setAttribute("disabled", "disabled");
+      }
+      break;
+    case "back":
+      if (activeSlide !== 0) {
+        innerWrapper.style.marginLeft = `${indentML + shearWidth}px`;
+        activeSlide = activeSlide - 1;
+        buttonNext.removeAttribute("disabled");
+      }
+      if (activeSlide === 0) {
+        buttonBack.setAttribute("disabled", "disabled");
+      }
+      break;
+  }
+  changeActivePoint(activeSlide);
+  timerLogic();
+};
 
-// Функция для обновления отображения слайдера
-function updateSlider() {
-  slides.forEach((slide, index) => {
-    if (index === slideIndex) {
-      slide.style.display = 'block';
-    } else {
-      slide.style.display = 'none';
-    }
+buttonBack.setAttribute("disabled", "disabled");
+addWidthSlides();
+for (i = 0; i < innerWrapper.children.length; i++) {
+  let newElem = document.createElement("button");
+  i === activeSlide
+    ? newElem.classList.add("main__slider-dot", "main__slider-dot_check")
+    : newElem.classList.add("main__slider-dot");
+  const activeIndex = i;
+  newElem.addEventListener("click", () => {
+    innerWrapper.style.transition = "margin-left .5s";
+    innerWrapper.style.marginLeft = `-${activeIndex * shearWidth}px`;
+    activeSlide = activeIndex;
+    changeActivePoint(activeIndex);
+    timerLogic();
   });
+  pagination.append(newElem);
 }
-
-// Инициализация слайдера
-updateSlider();
+buttonBack.addEventListener("click", () => changeActiveSlide("back"));
+buttonNext.addEventListener("click", () => changeActiveSlide("next"));
+window.addEventListener("resize", () => {
+  shearWidth = +getComputedStyle(wrapper).width.split("px")[0];
+  addWidthSlides();
+  if (activeSlide > 0) {
+    innerWrapper.style.marginLeft = `-${activeSlide * shearWidth}px`;
+  }
+});

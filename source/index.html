@@ -20,32 +20,30 @@
   </head>
   <body>
     @@include('blocks/header.html')
-    <main class="slider container">
-      <h1 class="slider__title">Andrey Aref'ev</h1>
+    <main class="main container">
+      <h1 class="main__title">Andrey Aref'ev</h1>
       @@include('blocks/text.html', {
-        'class':"slider__subtitle",
-        'text':"A student at the DL Academy 36 years old, Tolyatty"
-        
+        'class':"main__subtitle",
+        'text':"A student at the DL Academy 36 years old, Tolyatty"       
       })
-      <div class="slider__wrapper">
-        @@include('blocks/slider_img.html', {
-          'src':"./img/photo/garibaldiCastle.png",
-          'alt':"garibaldiCastle"
-        })
-        @@include('blocks/slider_img.html', {
-          'src':"./img/photo/iceRink.png",
-          'alt':"iceRink"
-        })
-        @@include('blocks/slider_img.html', {
-          'src':"./img/photo/work.png",
-          'alt':"work"
-        })
-        @@include('blocks/slider_img.html', {
-          'src':"./img/photo/submarine.png",
-          'alt':"submarine"
-        })
-      </div>
-      @@include('blocks/switches.html')        
+      <div class="container">
+        <div class="main__slider">
+          <div class="main__slider-wrapper">
+            <div class="main__slider-inner">
+              <div class="main__slider-slide">this is 1 slide</div>
+              <div class="main__slider-slide">this is 2 slide</div>
+              <div class="main__slider-slide">this is 3 slide</div>
+              <div class="main__slider-slide">this is 4 slide</div>
+            </div>
+          </div>
+          <div class="main__slider-switches">
+            <button class="main__slider_btn main__slider_btnPref main__slider_btnPref-js"></button>
+            <div class="main__slider_pagination main__slider_pagination-js"></div>
+            <button class="main__slider_btn main__slider_btnNext main__slider_btnNext-js"></button>    
+          </div>
+          </div>          
+        </div> 
+      </div>               
     </main>
 		<section class="page container">
       @@include('blocks/h2.html', {
@@ -134,12 +132,14 @@
         'class':"aside__title",
         'text':"Portfolio"
       })
-      <picture class="aside__img">
+      <div class="aside__wrapper">
+        <picture class="aside__wrapper-img">
         <source srcset="./img/picture/small.jpg" media="(max-width:320px)">
         <source srcset="./img/picture/normal.jpg" media="(max-width:768px)">
         <source srcset="./img/picture/big.jpg" media="(min-width:768px)">
         <img src="./img/picture/big.jpg" alt="layout">
-      </picture>
+        </picture>
+      </div>     
       <svg class="aside__arrowLeft" xmlns="http://www.w3.org/2000/svg" width="43" height="61" viewBox="0 0 43 61" fill="none">
         <g filter="url(#filter0_d_19_0)">
           <rect x="30.1641" y="52" width="29.9303" height="5.42502" rx="2.71251" transform="rotate(-135 30.1641 52)" fill="#070707"/>
@@ -183,7 +183,10 @@
       </div>
     </section>
     @@include('blocks/footer.html')
+    @@include('blocks/popup_signIn.html')
+    @@include('blocks/popup_register.html')
     <script src="js/app.js" defer></script>
     <script src="./js/slider.js"></script>
+    <script src="./js/popup.js"></script>
   </body>
 </html>
