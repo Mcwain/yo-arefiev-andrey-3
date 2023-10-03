@@ -1,5 +1,5 @@
 let popupCloseBtn = document.querySelector ('.popup__closeBtn_js');
-let popupOpenBtn = document.querySelector ('.header__btn_js');
+let popupOpenBtn = document.querySelector ('.banner__wrap-btn_js');
 let popup = document.querySelector ('.popup_js');
 let popupCloseBackground = document.querySelector ('.popup__background_js');
 
@@ -27,12 +27,12 @@ popupCloseBackground.addEventListener('click', ()=> {
 
 
 let modalWindowCloseBtn = document.querySelector ('.modalWindow__closeBtn_js');
-let modalWindowOpenBtn = document.querySelector ('.header__nav_js');
+let modalWindowOpenBtn = document.querySelector ('.banner__wrap_btn-js');
 let modalWindow = document.querySelector ('.modalWindow_js');
 let modalWindowCloseBackground = document.querySelector ('.modalWindow__background_js');
 
 modalWindowOpenBtn.addEventListener('click', ()=> {
-    modalWindow.classList.remove('hidden');
+    modalWindow.classList.remove('hidden')
 })
 
 modalWindowCloseBtn.addEventListener('click', ()=> {
@@ -48,11 +48,3 @@ window.addEventListener('keydown', (e) => {
 modalWindowCloseBackground.addEventListener('click', ()=> {
     modalWindow.classList.add('hidden');
 })
-
-
-
-
-
-const form = document.querySelector('.modalWindow__wrap-wrapper');
-const inputs = form.querySelectorAll('input')
-console.log()

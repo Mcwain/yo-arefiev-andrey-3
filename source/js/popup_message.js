@@ -4,7 +4,7 @@ let modal = document.querySelector ('.modal_js');
 let modalCloseBackground = document.querySelector ('.modal__background_js');
 
 modalOpenBtn.addEventListener('click', ()=> {
-    modal.classList.remove('hidden')
+    modal.classList.remove('hidden');
 })
 
 modalCloseBtn.addEventListener('click', ()=> {

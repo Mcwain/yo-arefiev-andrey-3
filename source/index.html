@@ -16,6 +16,11 @@
     </script>
 
     <link href="css/style.min.css" rel="stylesheet">
+    
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
 
   </head>
   <body>
@@ -45,41 +50,44 @@
         </div> 
       </div>               
     </main>
-		<section class="page container">
-      @@include('blocks/h2.html', {
-        'class':"page__title",
-        'text':"About me"
-      })		
-				<svg class="page__svgOne" xmlns="http://www.w3.org/2000/svg" width="482" height="139" viewBox="0 0 482 139" fill="none">
-					<path d="M480 2H2V117H416L436 137L456 117H480V2Z" stroke="#070707" stroke-width="2.5"/>
-				</svg>				
-				<svg class="page__svgTwo" xmlns="http://www.w3.org/2000/svg" width="482" height="118" viewBox="0 0 482 118" fill="none">
-					<path d="M480 1.99963H2V95.9996H26L46 116L66 95.9996H480V1.99963Z" stroke="#070707" stroke-width="2.5"/>
-				</svg>
-				<svg class="page__svgFree" xmlns="http://www.w3.org/2000/svg" width="482" height="118" viewBox="0 0 482 118" fill="none">
-					<path d="M480 2H2V96H416L436 116L456 96H480V2Z" stroke="#070707" stroke-width="2.5"/>
-				</svg>
-			<ul class="page__list">	
-				<li class="page__list-item page__list-itemOne">
-          @@include('blocks/text.html', {
-            'class':"page__list-text",
-            'text':"Hi all! I am an ordinary average citizen of the Russian Federation. Married to the most amazing woman in the world. There is a cat that seemed to have swallowed a watermelon, his name is Motya"
-          })
-        </li>			
-				<li class="page__list-item page__list-itemTwo">
-          @@include('blocks/text.html', {
-            'class':"page__list-text",
-            'text':"My main work is connected with the manufacture of loft furniture and metal doors. There I am a designer, and a welder, and a mechanic, and an installer."
-          })
-        </li>
-				<li class="page__list-item page__list-itemFree">
-          @@include('blocks/text.html', {
-            'class':"page__list-text",
-            'text':"I went to the academy to study as an IT programmer, mostly for the sake of self-development, but I do not exclude the fact that I will soon change jobs!"
-          })
-        </li>
-			</ul>
-		</section>
+    <div class="page__background">
+      <section class="page container">
+        @@include('blocks/h2.html', {
+          'class':"page__title",
+          'text':"About me"
+        })		
+          <svg class="page__svgOne" xmlns="http://www.w3.org/2000/svg" width="482" height="139" viewBox="0 0 482 139" fill="none">
+            <path d="M480 2H2V117H416L436 137L456 117H480V2Z" stroke="#070707" stroke-width="2.5"/>
+          </svg>				
+          <svg class="page__svgTwo" xmlns="http://www.w3.org/2000/svg" width="482" height="118" viewBox="0 0 482 118" fill="none">
+            <path d="M480 1.99963H2V95.9996H26L46 116L66 95.9996H480V1.99963Z" stroke="#070707" stroke-width="2.5"/>
+          </svg>
+          <svg class="page__svgFree" xmlns="http://www.w3.org/2000/svg" width="482" height="118" viewBox="0 0 482 118" fill="none">
+            <path d="M480 2H2V96H416L436 116L456 96H480V2Z" stroke="#070707" stroke-width="2.5"/>
+          </svg>
+        <ul class="page__list">	
+          <li class="page__list-item page__list-itemOne">
+            @@include('blocks/text.html', {
+              'class':"page__list-text",
+              'text':"Hi all! I am an ordinary average citizen of the Russian Federation. Married to the most amazing woman in the world. There is a cat that seemed to have swallowed a watermelon, his name is Motya"
+            })
+          </li>			
+          <li class="page__list-item page__list-itemTwo">
+            @@include('blocks/text.html', {
+              'class':"page__list-text",
+              'text':"My main work is connected with the manufacture of loft furniture and metal doors. There I am a designer, and a welder, and a mechanic, and an installer."
+            })
+          </li>
+          <li class="page__list-item page__list-itemFree">
+            @@include('blocks/text.html', {
+              'class':"page__list-text",
+              'text':"I went to the academy to study as an IT programmer, mostly for the sake of self-development, but I do not exclude the fact that I will soon change jobs!"
+            })
+          </li>
+        </ul>
+      </section>
+    </div>
+		
 		<section class="cards container">
       @@include('blocks/h2.html', {
         'class':"cards__title",
@@ -127,66 +135,39 @@
         })
       </div>
 		</section>
-    <section class="aside container">
-      @@include('blocks/h2.html', {
-        'class':"aside__title",
-        'text':"Portfolio"
-      })
-      <div class="aside__wrapper">
-        <picture class="aside__wrapper-img">
-        <source srcset="./img/picture/small.jpg" media="(max-width:320px)">
-        <source srcset="./img/picture/normal.jpg" media="(max-width:768px)">
-        <source srcset="./img/picture/big.jpg" media="(min-width:768px)">
-        <img src="./img/picture/big.jpg" alt="layout">
-        </picture>
-      </div>     
-      <svg class="aside__arrowLeft" xmlns="http://www.w3.org/2000/svg" width="43" height="61" viewBox="0 0 43 61" fill="none">
-        <g filter="url(#filter0_d_19_0)">
-          <rect x="30.1641" y="52" width="29.9303" height="5.42502" rx="2.71251" transform="rotate(-135 30.1641 52)" fill="#070707"/>
-          <rect x="34" y="13.5198" width="29.9303" height="5.42502" rx="2.71251" transform="rotate(135 34 13.5198)" fill="#070707"/>
-        </g>
-        <defs>
-          <filter id="filter0_d_19_0" x="0.123535" y="0.807373" width="42.7529" height="60.0691" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-            <feOffset/>
-            <feGaussianBlur stdDeviation="5"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_19_0"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_19_0" result="shape"/>
-          </filter>
-        </defs>
-      </svg>
-      <svg class="aside__arrowRight" xmlns="http://www.w3.org/2000/svg" width="43" height="61" viewBox="0 0 43 61" fill="none">
-        <g filter="url(#filter0_d_17_7)">
-          <rect x="12.8359" y="9" width="29.9303" height="5.42502" rx="2.71251" transform="rotate(45 12.8359 9)" fill="#070707"/>
-          <rect x="9" y="47.4802" width="29.9303" height="5.42502" rx="2.71251" transform="rotate(-45 9 47.4802)" fill="#070707"/>
-        </g>
-        <defs>
-          <filter id="filter0_d_17_7" x="0.123535" y="0.123535" width="42.7529" height="60.0691" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-            <feOffset/>
-            <feGaussianBlur stdDeviation="5"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_17_7"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_17_7" result="shape"/>
-          </filter>
-        </defs>
-      </svg>
-      <div class="aside__wrap">
-        <a class="aside__wrap-link" href="#">Learning site for DL Academy courses</a>
-        @@include('blocks/text.html', {
-          'class':"aside__wrap-text",
-          'text':"A simple multi-page static site. The design layout was in Figma. HTML and CSS were used. The site is responsive and cross-browser, but without adding interactivity via JavaScript."
+    <div class="aside__background">
+      <section class="aside container">
+        @@include('blocks/h2.html', {
+          'class':"aside__title",
+          'text':"Portfolio"
         })
-      </div>
-    </section>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="./img/photo/main.png" alt="main"></div>
+              <div class="swiper-slide"><img src="./img/photo/blog.png" alt="blog"></div>
+              <div class="swiper-slide"><img src="./img/photo/contactUs.png" alt="contactUs"></div>
+              <div class="swiper-slide"><img src="./img/photo/grid.png" alt="grid"></div>
+              ...
+            </div>       
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="aside__wrap">
+            <a class="aside__wrap-link" href="#">Learning site for DL Academy courses</a>
+            @@include('blocks/text.html', {
+              'class':"aside__wrap-text",
+              'text':"A simple multi-page static site. The design layout was in Figma. HTML and CSS were used. The site is responsive and cross-browser, but without adding interactivity via JavaScript."
+            })
+          </div>
+        </div>   
+      </section>
+    </div>   
     @@include('blocks/footer.html')
     @@include('blocks/popup_signIn.html')
     @@include('blocks/popup_register.html')
     <script src="js/app.js" defer></script>
     <script src="./js/slider.js"></script>
     <script src="./js/popup.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

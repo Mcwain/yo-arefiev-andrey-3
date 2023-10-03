@@ -90,3 +90,26 @@ window.addEventListener("resize", () => {
     innerWrapper.style.marginLeft = `-${activeSlide * shearWidth}px`;
   }
 });
+
+
+
+
+
+// const wrap = slider.querySelector(".main__slider-inner"); 
+//   let slideWidth = wrap.offsetWidth; 
+
+//   initWidth();   
+  
+//   window.addEventListener("resize", () => {
+//     initWidth();  
+
+//     setActiveSlide(activeSlideIndex);
+//   })
+
+//   function initWidth() {   
+//     slideWidth = wrap.offsetWidth;
+
+//     slides.forEach(slide => {
+//       slide.style.width = `${slideWidth}px`;  
+//     })
+//   }

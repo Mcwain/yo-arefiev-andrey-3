@@ -57,12 +57,15 @@
             </li>
           </ul>
           <div class="banner__wrap-inner">
-            <button class="banner__wrap-btn" type="button">Change password</button>
-            <button class="banner__wrap-btn" type="button">Change other data</button>
+            <button class="banner__wrap-btn banner__wrap-btn_js" type="button">Change password</button>
+            <button class="banner__wrap-btn banner__wrap_btn-js" type="button">Change other data</button>
             <button class="banner__wrap-btn" type="button">Delete account</button>
           </div>
         </div>
       </div>
     </section>
+    @@include('blocks/popup_password.html')
+    @@include('blocks/popup_data.html')
+    <script src="./js/popup_profile.js"></script>
 </body>
 </html>

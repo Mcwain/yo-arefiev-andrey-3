@@ -14,6 +14,8 @@
 
 
 @import "profile";
+@import "myBlog";
+
 /*
   Import all other blocks
 */
@@ -25,11 +27,21 @@
 @import "_blocks/popup_register";
 @import "_blocks/myHeader";
 @import "_blocks/popup_message";
+@import "_blocks/popup_password";
+@import "_blocks/popup_data";
 
 button {
   cursor: pointer;
 }
 
+.swiper {
+  width: 1000px;
+  height: 604px;
+  margin: 0;
+}
+.swiper-button-next {
+  width: 25px;
+}
 
 .main {
   display: flex;
@@ -89,6 +101,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin-bottom: 60px;
   }
   &__slider-dot {
     width: 10px;
@@ -137,6 +150,9 @@ button {
     background-image: url(../img/main/arrowRightHover.svg);
     transition: 1s;
   } 
+}
+.page__background {
+  background-color: #F6F6F6;
 }
 .page {
   display: flex;
@@ -218,7 +234,7 @@ button {
       color: #828282;
     }
     &-inner {
-      width: 180px;
+      width: 170px;
       max-width: 100%;
       display: flex;
       justify-content: space-between;
@@ -238,42 +254,28 @@ button {
     margin-bottom: 60px; 
   }
 }
+.aside__background {
+  background-color: #F6F6F6;
+  padding-bottom: 10px;
+}
 .aside {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
   margin-bottom: 60px;
-  &__wrapper {
-    max-width: 100%;
-  }
-  &__wrapper-img {
-    max-width: 100%;
-  }
-  &__imgBig {
-    max-width: 100%;
-  }
   &__title {
     font-family:$gilroy;
     font-size: 34px;
     margin: 60px auto 50px;
   }
-  &__arrowLeft {
-    position: absolute;
-    left: 2%;
-    top: 55%;
-  }
-  &__arrowRight {
-    position: absolute;
-    right: 2%;
-    top: 55%;
-  }
   &__wrap {
     position: absolute;
     bottom: 0;
-    width: 100%;
+    width: 99.1%;
     height: 150px;
     display: flex;
+    margin-left: 9px;
     background: #070707d9;
     flex-direction: column;
     align-items: center;

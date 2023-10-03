@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>DL Academy</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <script>
+      var docElement = document.documentElement;
+      docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
+    </script>
+
+    <link href="css/style.min.css" rel="stylesheet">
+
+  </head>
+  <body>
+    @@include('blocks/myHeader.html')
+    <article class="options container">
+      <h2 class="options__title">My Blog</h2>
+      <div class="options__form">
+        <div class="options__form-wrapCheckbox">
+          @@include('blocks/text.html', {
+          'class':"options__form-text",
+          'text':"Tags"       
+          })    
+          <div class="options__form-wrapper">
+
+          </div>
+        </div>              
+        <div class="options__form-wrap">
+          @@include('blocks/text.html', {
+            'class':"options__form-text",
+            'text':"Views"       
+          })
+          @@include('blocks/radio.html', {
+            'class':"options__form-inner",
+            'value':"small",
+            'id':"radio-small",
+            'for':"radio-small",
+            'radioLabel':"options__form-radioComments",
+            'radioInput':"options__form-inputComments",
+            'text':"100-500"
+          })
+          @@include('blocks/radio-checked.html', {
+            'class':"options__form-inner",
+            'value':"normal",
+            'id':"radio-normal",
+            'for':"radio-normal",
+            'radioLabel':"options__form-radioComments",
+            'radioInput':"options__form-inputComments",
+            'text':"500-1000"
+          })
+          @@include('blocks/radio.html', {
+            'class':"options__form-inner",
+            'value':"big",
+            'id':"radio-big",
+            'for':"radio-big",
+            'radioLabel':"options__form-radioComments",
+            'radioInput':"options__form-inputComments",
+            'text':"1000-2000"
+          })
+        </div>
+        <div class="options__form-wrap">
+          
+        </div>
+        <div class="options__form-wrap_show">
+          @@include('blocks/text.html', {
+            'class':"options__form-text",
+            'text':"How show?"       
+          })
+          @@include('blocks/radio-checked.html', {
+            'class':"options__form-innerShow",
+            'value':"show_5",
+            'id':"show_5",
+            'for':"show_5",
+            'radioLabel':"options__form-radioShow",
+            'radioInput':"options__form-inputShow",
+            'text':"show 5"
+          })
+          @@include('blocks/radio.html', {
+            'class':"options__form-innerShow",
+            'value':"show_10",
+            'id':"show_10",
+            'for':"show_10",
+            'radioLabel':"options__form-radioShow",
+            'radioInput':"options__form-inputShow",
+            'text':"show 10"
+          })
+        </div>
+      </div>
+    </article>
+    @@include('blocks/footer.html')
+    <script src="js/app.js" defer></script>
+    <script src="js/checkbox.js"></script>
+  </body>
+</html>

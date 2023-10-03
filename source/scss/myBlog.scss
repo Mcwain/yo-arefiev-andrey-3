@@ -1,0 +1,83 @@
+// стилизация на чекбокс-Tags
+.options__form-wrapper {
+    display: flex;
+    max-width: 115px;
+    max-height: 25px;
+    flex-wrap: wrap;
+}
+.options__form-CheckboxTags {
+    display: block;
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    font-size: 22px;
+    height: 27px;
+    user-select: none;
+}
+.options__form-inputTags {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.options__form-spanTags {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 6px;
+}
+.options__form-spanTags::after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.options__form-inputTags:checked ~ .options__form-spanTags::after {
+    display: block;
+}
+.options__form-CheckboxTags .options__form-spanTags::after {
+    left: 6px;
+    top: 0;
+    width: 7px;
+    height: 17px;
+    border-style: solid;
+    border-color: inherit;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    &__form {
+        display: flex;
+        gap: 77px;
+    }
+    &__form-checkbox {
+        display: none;
+    }
+    &__form-text {
+    width: 115px;
+    }
+    &__form-wrap {
+        display: flex;
+        flex-direction: column;
+    }
+    &__form-inner {
+        display: flex;
+        gap: 10px;
+    }
+    &__form-label {
+        display: flex;
+        max-height: 30px;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+    } 
+}
