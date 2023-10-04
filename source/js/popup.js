@@ -48,11 +48,3 @@ window.addEventListener('keydown', (e) => {
 modalWindowCloseBackground.addEventListener('click', ()=> {
     modalWindow.classList.add('hidden');
 })
-
-
-
-
-
-const form = document.querySelector('.modalWindow__wrap-wrapper');
-const inputs = form.querySelectorAll('input')
-console.log()
