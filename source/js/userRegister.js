@@ -1,16 +1,9 @@
 (function () {
-    const modalLogin = document.querySelector('.popup popup_js');
-    const btnLoginModalOpen = document.querySelector('.j-login-button');
-    const btnLoginModalClose = document.querySelector('.j-close-modal-login');
-    const loginForm = document.forms.loginForm;
+    const modalLogin = document.querySelector('.popup_js');
+    const btnLoginModalOpen = document.querySelector('.header__btn_js');
+    const btnLoginModalClose = document.querySelector('.popup__closeBtn_js');
+    const loginForm = document.forms.formSignIn;
 
-    btnLoginModalOpen.addEventListener('click', () => {
-        interectionModal(modalLogin)
-    })
-
-    btnLoginModalClose.addEventListener('click', () => {
-        interectionModal(modalLogin)
-    })
 
     loginForm.addEventListener('submit', (e) => {
         e.preventDefault(e);
@@ -52,11 +45,9 @@
 })();
 
 (function () {
-    const openModalBtn = document.querySelector('.j-register-button');
-    const modal = document.querySelector('.j-modal-register');
-    const closeModalBtn = document.querySelector('.j-close-modal-register');
-    const loader = document.querySelector('.loader_js');
-    const regForm = document.forms.registerForm;
+    const modal = document.querySelector('.modalWindow_js');
+    const loader = document.querySelector('.modalWindow__wrap-loader_js');
+    const regForm = document.forms.register;
 
 
 
@@ -65,12 +56,12 @@
         loader.classList.remove('hidden');
         let data = {};
 
-        data.email = registerForm.elements.email.value;
-        data.name = registerForm.elements.name.value;
-        data.surname = registerForm.elements.surname.value;
-        data.password = registerForm.elements.password.value;
-        data.location = registerForm.elements.location.value;
-        data.age = registerForm.elements.age.value;
+        data.email = regForm.elements.email.value;
+        data.name = regForm.elements.name.value;
+        data.surname = regForm.elements.surname.value;
+        data.password = regForm.elements.password.value;
+        data.location = regForm.elements.location.value;
+        data.age = regForm.elements.age.value;
 
         sendRequest({
             method: 'POST',
@@ -98,12 +89,5 @@
             interectionModal(modal);
         })
         
-    })
-    openModalBtn.addEventListener('click', () => {
-        interectionModal(modal)
-    })
-
-    closeModalBtn.addEventListener('click', () => {
-        interectionModal(modal)
     })
 })()

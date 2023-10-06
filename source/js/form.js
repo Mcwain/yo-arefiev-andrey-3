@@ -29,14 +29,14 @@
 })()
 
 (function() {
-    const formignIn = document.forms.formSignIn;
-    if(!formignIn) return;
+    const formSignIn = document.forms.formSignIn;
+    if(!formSignIn) return;
 
-    formignIn.addEventListener('submit', (e) => {
+    formSignIn.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        const userEmail = formignIn.elements.email;
-        const userPassword = formignIn.elements.password;
+        const userEmail = formSignIn.elements.email;
+        const userPassword = formSignIn.elements.password;
 
         const data = {
             email: userEmail.value,
@@ -176,12 +176,7 @@ function getAll(form) {
 function isEmailCorrect(email) {
     return email.match(/^[0-9a-z-\.]+\@[0-9a-z-]{2,}\.[a-z]{2,}$/i);
 }
-let phoneCheck = phone.match(/^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/);
 
-if (!phoneCheck){
-    alert("Уверены что телефон введен верно?")
-    return false
-}
 
 
 function setError(input, messageError) {
