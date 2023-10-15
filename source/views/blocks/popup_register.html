@@ -2,10 +2,10 @@
     <div class="modalWindow__background modalWindow__background_js"></div>
     <div class="modalWindow__wrap">
         <button class="modalWindow__wrap-closeBtn modalWindow__closeBtn_js"></button>
-        <form class="modalWindow__wrap-wrapper" name="register" action="./profile.html" method="post">
+        <form class="modalWindow__wrap-wrapper" name="registerForm" action="./profile.html" method="post">
             <div class="modalWindow__wrap-inner">
                 <label class="modalWindow__wrap-label" for="mail">Email</label>
-                <input class="modalWindow__wrap-input" name="email" type="email" id="mail" placeholder="name@example.com">
+                <input class="modalWindow__wrap-input" name="email" type="text" id="mail" placeholder="name@example.com">
             </div>
             <ul class="modalWindow__wrap-list">
                 <li class="modalWindow__wrap-item">
@@ -33,16 +33,12 @@
                     <input class="modalWindow__wrap-input" name="age" type="number" id="age">
                 </li>                                                                                                
             </ul>
-            <div class="modalWindow__wrap-wrapperCheck">
-                <label class="modalWindow__wrap-text">Clicking on the button, you consent to the processing of your personal data.
-                    <input class="modalWindow__wrap-checkbox" type="checkbox">
-                    <span class="modalWindow__wrap-span"></span>
-                </label>
+            <div class="modalWindow__wrap-wrapperCheck">               
+                <label class="modalWindow__wrap-text" for="defaultCheck">Clicking on the button, you consent to the processing of your personal data.</label>
+                <input class="modalWindow__wrap-checkbox" name="accept" type="checkbox" id="defaultCheck">
+                <span class="modalWindow__wrap-span"></span>
             </div>
             <button class="modalWindow__wrap-link" type="submit">Sign In</button>
-            <div class="modalWindow__wrap-loader modalWindow__wrap-loader_js hidden">
-                <div class="spinner-border" role="status">
-                    <span class="sr-only">Loading...</span>
                 </div>
             </div>
         </form>

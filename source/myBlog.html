@@ -29,73 +29,125 @@
           'text':"Tags"       
           })    
           <div class="options__form-wrapper">
-
           </div>
         </div>              
-        <div class="options__form-wrap">
+        <div class="options__form-wrapViews">
+          @@include('blocks/text.html', {
+          'class':"options__form-text",
+          'text':"Views"       
+          })
+          <div class="options__form-wrapperViews"> 
+            @@include('blocks/radio.html', {
+              'class':"options__form-innerViews",
+              'radioLabel':"options__form-labelRadio",
+              'radioInput':"options__form-inputRadio",
+              'name':"views",
+              'text':"100-500"       
+            })                      
+            @@include('blocks/radio.html', {
+              'class':"options__form-innerViews",
+              'radioLabel':"options__form-labelRadio",
+              'radioInput':"options__form-inputRadio",
+              'name':"views",
+              'text':"500-1000"       
+            }) 
+            @@include('blocks/radio.html', {
+              'class':"options__form-innerViews",
+              'radioLabel':"options__form-labelRadio",
+              'radioInput':"options__form-inputRadio",
+              'name':"views",
+              'text':"1000-2000"       
+            }) 
+          </div>  
+        </div>
+        <div class="options__form-wrapComments">
           @@include('blocks/text.html', {
             'class':"options__form-text",
-            'text':"Views"       
-          })
-          @@include('blocks/radio.html', {
-            'class':"options__form-inner",
-            'value':"small",
-            'id':"radio-small",
-            'for':"radio-small",
-            'radioLabel':"options__form-radioComments",
-            'radioInput':"options__form-inputComments",
-            'text':"100-500"
-          })
-          @@include('blocks/radio-checked.html', {
-            'class':"options__form-inner",
-            'value':"normal",
-            'id':"radio-normal",
-            'for':"radio-normal",
-            'radioLabel':"options__form-radioComments",
-            'radioInput':"options__form-inputComments",
-            'text':"500-1000"
-          })
-          @@include('blocks/radio.html', {
-            'class':"options__form-inner",
-            'value':"big",
-            'id':"radio-big",
-            'for':"radio-big",
-            'radioLabel':"options__form-radioComments",
-            'radioInput':"options__form-inputComments",
-            'text':"1000-2000"
-          })
+            'text':"Comments"       
+            })
+            <div class="options__form-wrapperComments">
+              @@include('blocks/checkboxCheked.html', {
+                'class':"options__form-innerComments",
+                'checkboxLabel':"options__form-labelCheckbox",
+                'checkboxInput':"options__form-inputCheckbox",
+                'text':"0"       
+              })
+              @@include('blocks/checkbox.html', {
+                'class':"options__form-innerComments",
+                'checkboxLabel':"options__form-labelCheckbox",
+                'checkboxInput':"options__form-inputCheckbox",
+                'text':"0-1"       
+              })
+              @@include('blocks/checkbox.html', {
+                'class':"options__form-innerComments",
+                'checkboxLabel':"options__form-labelCheckbox",
+                'checkboxInput':"options__form-inputCheckbox",
+                'text':"1-50"       
+              })
+            </div>        
         </div>
-        <div class="options__form-wrap">
-          
-        </div>
-        <div class="options__form-wrap_show">
+        <div class="options__form-wrapShow">
           @@include('blocks/text.html', {
             'class':"options__form-text",
-            'text':"How show?"       
+            'text':"How show"       
+            })
+            <div class="options__form-wrapperShow">
+              @@include('blocks/radio.html', {
+                'class':"options__form-innerShow",
+                'radioLabel':"options__form-labelRadio",
+                'radioInput':"options__form-inputRadio",
+                'name':"Show",
+                'text':"show 5"       
+              })
+              @@include('blocks/radio.html', {
+                'class':"options__form-innerShow",
+                'radioLabel':"options__form-labelRadio",
+                'radioInput':"options__form-inputRadio",
+                'name':"Show",
+                'text':"show 10"       
+              }) 
+            </div>
+        </div>
+        <div class="options__form-wrapViews">
+          @@include('blocks/text.html', {
+          'class':"options__form-text",
+          'text':"Sort by"       
           })
-          @@include('blocks/radio-checked.html', {
-            'class':"options__form-innerShow",
-            'value':"show_5",
-            'id':"show_5",
-            'for':"show_5",
-            'radioLabel':"options__form-radioShow",
-            'radioInput':"options__form-inputShow",
-            'text':"show 5"
-          })
-          @@include('blocks/radio.html', {
-            'class':"options__form-innerShow",
-            'value':"show_10",
-            'id':"show_10",
-            'for':"show_10",
-            'radioLabel':"options__form-radioShow",
-            'radioInput':"options__form-inputShow",
-            'text':"show 10"
-          })
+          <div class="options__form-wrapperViews"> 
+            @@include('blocks/radio.html', {
+              'class':"options__form-innerSort",
+              'radioLabel':"options__form-labelRadio",
+              'radioInput':"options__form-inputRadio",
+              'name':"Sort",
+              'text':"date"       
+            })                      
+            @@include('blocks/radio.html', {
+              'class':"options__form-innerSort",
+              'radioLabel':"options__form-labelRadio",
+              'radioInput':"options__form-inputRadio",
+              'name':"Sort",
+              'text':"title"       
+            }) 
+            @@include('blocks/radio.html', {
+              'class':"options__form-innerSort",
+              'radioLabel':"options__form-labelRadio",
+              'radioInput':"options__form-inputRadio",
+              'name':"Sort",
+              'text':"views"       
+            }) 
+          </div>  
         </div>
       </div>
     </article>
+    <section class="container cards">
+      <ul class="cards__list">
+
+      </ul>
+      <button class="cards__btn cards__btn-js">show more</button>
+    </section>
     @@include('blocks/footer.html')
     <script src="js/app.js" defer></script>
     <script src="js/checkbox.js"></script>
+    <script src="js/postsFetch.js"></script>
   </body>
 </html>

@@ -1,8 +1,8 @@
-const BASE_SERVER_PATH = 'https://academy.directlinedev.com/';
-
 function interectionModal(modal) {
     modal.classList.toggle('hidden');
 }
+
+const BASE_SERVER_PATH = 'https://academy.directlinedev.com/';
 
 function sendRequest({url, method = 'GET', headers, body = null}) {
     return fetch(BASE_SERVER_PATH + url, {

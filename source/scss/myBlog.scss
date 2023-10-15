@@ -1,3 +1,4 @@
+
 // стилизация на чекбокс-Tags
 .options__form-wrapper {
     display: flex;
@@ -79,5 +80,51 @@
         align-items: center;
         gap: 10px;
         cursor: pointer;
-    } 
+    }
+    &__form-text {
+        font-family: $gilroy;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    &__form-labelRadio,
+    &__form-labelCheckbox {
+        font-family: $gilroy;
+        font-size: 18px;
+        font-weight: 500;
+        position: relative;
+        margin-left: 20px;
+    }
+    
+    
+}
+.options__form-labelRadio::after,
+.options__form-labelRadio::before {
+        content: "";
+        position: absolute;
+        left: -30px;
+        top: 0;
+        width: 25px;
+        height: 25px;
+    }
+.options__form-inputRadio + .options__form-labelRadio::after {
+        background-image: url(../img/blog/radio.svg);
+}
+.options__form-inputRadio:checked + .options__form-labelRadio::before {
+        background-image: url(../img/blog/radioChecked.svg);
+}
+
+.options__form-labelCheckbox::after,
+.options__form-labelCheckbox::before {
+        content: "";
+        position: absolute;
+        left: -30px;
+        top: 0;
+        width: 25px;
+        height: 25px;
+    }
+.options__form-inputCheckbox:checked + .options__form-labelCheckbox::before {
+        background-image: url(../img/blog/checkbox-cheked.svg);
+}
+.options__form-inputCheckbox + .options__form-labelCheckbox::after {
+        background-image: url(../img/blog/checkbox.svg);
 }

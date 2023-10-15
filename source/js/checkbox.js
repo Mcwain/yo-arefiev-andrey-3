@@ -43,4 +43,3 @@ function sendReq({url, method = 'GET', headers, body = null}) {
         body
     });
 }
-
