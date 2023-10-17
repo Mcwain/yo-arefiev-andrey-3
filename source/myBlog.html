@@ -36,11 +36,12 @@
           'class':"options__form-text",
           'text':"Views"       
           })
-          <div class="options__form-wrapperViews"> 
+          <div class="options__form-wrap"> 
             @@include('blocks/radio.html', {
               'class':"options__form-innerViews",
               'radioLabel':"options__form-labelRadio",
               'radioInput':"options__form-inputRadio",
+              'radioSpan':"options__form-spanRadio",
               'name':"views",
               'text':"100-500"       
             })                      
@@ -48,6 +49,7 @@
               'class':"options__form-innerViews",
               'radioLabel':"options__form-labelRadio",
               'radioInput':"options__form-inputRadio",
+              'radioSpan':"options__form-spanRadio",
               'name':"views",
               'text':"500-1000"       
             }) 
@@ -55,6 +57,7 @@
               'class':"options__form-innerViews",
               'radioLabel':"options__form-labelRadio",
               'radioInput':"options__form-inputRadio",
+              'radioSpan':"options__form-spanRadio",
               'name':"views",
               'text':"1000-2000"       
             }) 
@@ -65,23 +68,26 @@
             'class':"options__form-text",
             'text':"Comments"       
             })
-            <div class="options__form-wrapperComments">
-              @@include('blocks/checkboxCheked.html', {
+            <div class="options__form-wrap">
+              @@include('blocks/checkbox.html', {
                 'class':"options__form-innerComments",
                 'checkboxLabel':"options__form-labelCheckbox",
                 'checkboxInput':"options__form-inputCheckbox",
+                'checkboxSpan':"options__form-spanCheckbox",
                 'text':"0"       
               })
               @@include('blocks/checkbox.html', {
                 'class':"options__form-innerComments",
                 'checkboxLabel':"options__form-labelCheckbox",
                 'checkboxInput':"options__form-inputCheckbox",
+                'checkboxSpan':"options__form-spanCheckbox",
                 'text':"0-1"       
               })
               @@include('blocks/checkbox.html', {
                 'class':"options__form-innerComments",
                 'checkboxLabel':"options__form-labelCheckbox",
                 'checkboxInput':"options__form-inputCheckbox",
+                'checkboxSpan':"options__form-spanCheckbox",
                 'text':"1-50"       
               })
             </div>        
@@ -91,11 +97,12 @@
             'class':"options__form-text",
             'text':"How show"       
             })
-            <div class="options__form-wrapperShow">
+            <div class="options__form-wrap">
               @@include('blocks/radio.html', {
                 'class':"options__form-innerShow",
                 'radioLabel':"options__form-labelRadio",
                 'radioInput':"options__form-inputRadio",
+                'radioSpan':"options__form-spanRadio",
                 'name':"Show",
                 'text':"show 5"       
               })
@@ -103,6 +110,7 @@
                 'class':"options__form-innerShow",
                 'radioLabel':"options__form-labelRadio",
                 'radioInput':"options__form-inputRadio",
+                'radioSpan':"options__form-spanRadio",
                 'name':"Show",
                 'text':"show 10"       
               }) 
@@ -113,11 +121,12 @@
           'class':"options__form-text",
           'text':"Sort by"       
           })
-          <div class="options__form-wrapperViews"> 
+          <div class="options__form-wrap"> 
             @@include('blocks/radio.html', {
               'class':"options__form-innerSort",
               'radioLabel':"options__form-labelRadio",
               'radioInput':"options__form-inputRadio",
+              'radioSpan':"options__form-spanRadio",
               'name':"Sort",
               'text':"date"       
             })                      
@@ -125,6 +134,7 @@
               'class':"options__form-innerSort",
               'radioLabel':"options__form-labelRadio",
               'radioInput':"options__form-inputRadio",
+              'radioSpan':"options__form-spanRadio",
               'name':"Sort",
               'text':"title"       
             }) 
@@ -132,18 +142,30 @@
               'class':"options__form-innerSort",
               'radioLabel':"options__form-labelRadio",
               'radioInput':"options__form-inputRadio",
+              'radioSpan':"options__form-spanRadio",
               'name':"Sort",
               'text':"views"       
             }) 
           </div>  
         </div>
+        <div>
+          <p class="options__form-subtitle">reset form</p>
+          <button class="options__form-btnReset" type="reset">Reset</button>
+        </div>         
       </div>
+      <form class="options__form-search">
+          <input class="options__form-inputSearch" aria-label="0" name="Search" type="text" required>
+          <button class="options__form-btnSearch" tabindex="0" type="submit">Search</button>
+        </form>
     </article>
     <section class="container cards">
       <ul class="cards__list">
-
       </ul>
-      <button class="cards__btn cards__btn-js">show more</button>
+      <div class="full hidden main-loader_js">
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+      </div>
     </section>
     @@include('blocks/footer.html')
     <script src="js/app.js" defer></script>

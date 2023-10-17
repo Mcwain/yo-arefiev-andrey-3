@@ -1,3 +1,4 @@
+
 (function () {
     const openModalBtn = document.querySelector ('.header__nav_js');
     const modal = document.querySelector ('.modalWindow_js');
@@ -48,20 +49,20 @@
         
     })
     openModalBtn.addEventListener('click', () => {
-        interectionModal(modal)
+        modal.classList.remove('hidden');
     })
 
     closeModalBtn.addEventListener('click', () => {
-        interectionModal(modal)
+        modal.classList.add('hidden');
     })
 
     window.addEventListener('keydown', (e) => {
         if (e.keyCode === 27) {
-            modalWindow.classList.add('hidden');
+            modal.classList.add('hidden');
         }
     })
     
     modalWindowCloseBackground.addEventListener('click', ()=> {
-        modalWindow.classList.add('hidden');
+        modal.classList.add('hidden');
     })
 })()
